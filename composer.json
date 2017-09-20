@@ -3,6 +3,7 @@
     "description": "Complete PHP library for managing debian servers via PHP",
     "keywords": ["server", "nginx", "manage"],
     "license": "DBAD",
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "Jesse Bud",
