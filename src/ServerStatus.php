@@ -38,4 +38,13 @@ class ServerStatus{
         return $output;
     }    
 
+    /**
+     * Gets the available disk space for all drives (df)
+     *
+     * @return string
+     */
+    public function getDiskSpace():string{
+        $output = shell_exec("df");
+        return $output;
+    }
 }
