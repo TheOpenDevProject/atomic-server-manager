@@ -12,8 +12,30 @@ class ServerStatus{
     *
     * @return string
     */
-    public static function GetProcInfo(): string{
-        $output = shell_exec("lspcu");
+    public function getProcInfo(): string{
+        $output = shell_exec("lscpu");
         return $output;
     }
+
+    /**
+     * Gets the systems available free memory in Mb
+     *
+     * @return string
+     */
+
+    public function getFreeMemInfo(): string{
+        $output = shell_exec("free -m");
+        return $output;
+    }
+
+    /**
+     * Gets the servers uptime since last reboot / shutdown
+     *
+     * @return string
+     */
+    public function getServerUptime(): string{
+        $output = shell_exec("uptime");
+        return $output;
+    }    
+
 }
