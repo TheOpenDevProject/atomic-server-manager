@@ -1,9 +1,17 @@
 <?php
 
 namespace AtomicServer\Parsers;
-
+/**
+ * Foundation for all config parsers
+ */
 class ConfigParser{
-    public $configFileHandle;
+    /**
+     * The open handle for the config file
+     *
+     * @var [handle]
+     */
+    protected $configFileHandle;
+
     public function __construct(){
 
     }
@@ -23,7 +31,9 @@ class ConfigParser{
         $this->configFileHandle = fopen($file,'r');
         return $this;
     }
-
+    public function read(): string{
+        return fread($this->configFileHandle,filesize($this->configFileHandle));
+    }
     /**
      * Ensures we dont leave an open handle to the config file
      *

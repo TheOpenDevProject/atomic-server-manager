@@ -9,6 +9,6 @@ class NginxConfigParser_Test extends PHPUnit_Framework_TestCase{
     }
 
     public function testLoadFile(){
-        $this->instance->loadFromFile('/etc/nginx/sites-available/budyj.xyz');
+        $this->instance->fromConfig('/etc/nginx/sites-available/','budyj.xyz');
     }
 }
