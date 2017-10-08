@@ -1,11 +1,12 @@
 <?php
-require '../src/ServerStatus.php';
+
+use AtomicServer\Info\ServerStatus;
 
 class ServerStatus_Test extends PHPUnit_Framework_TestCase{
     public $instance;
 
     public function setUp(){
-        $this->instance = new AtomicServer\Info\ServerStatus;
+        $this->instance = new ServerStatus;
     }
 
     public function testCanGetLSCPU(){
