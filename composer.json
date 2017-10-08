@@ -19,8 +19,7 @@
     },
 	"autoload": {
         "psr-4": {
-            "AtomicServer\\": "src/",
-            "AtomicServer\\Parsers\\": "src/Parsers/"
+            "AtomicServer\\": "src/"
         }
     }
 }
