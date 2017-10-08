@@ -1,11 +1,13 @@
 <?php
-require '../src/Parsers/NginxConfigParser.php';
-    
+
+use AtomicServer\Parsers\NginxConfigParser;
+
+
 class NginxConfigParser_Test extends PHPUnit_Framework_TestCase{
     public $instance;
 
     public function setUp(){
-        $this->instance = new AtomicServer\Parsers\NginxConfigParser;
+        $this->instance = new NginxConfigParser;
     }
 
     public function testLoadFile(){
